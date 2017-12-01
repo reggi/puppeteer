@@ -242,6 +242,6 @@ function requestOptions(url, method = 'GET') {
       secureProxy: parsedProxyURL.protocol === 'https:'
     });
   }
-
+  console.log(result)
   return result;
 }
