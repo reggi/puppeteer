@@ -45,6 +45,10 @@ if (HTTP_PROXY)
 if (NO_PROXY)
   process.env.NO_PROXY = NO_PROXY;
 
+console.log(process.env.HTTPS_PROXY)
+console.log(process.env.HTTP_PROXY)
+console.log(process.env.NO_PROXY)
+
 const allRevisions = Downloader.downloadedRevisions();
 const DOWNLOAD_HOST = process.env.PUPPETEER_DOWNLOAD_HOST || process.env.npm_config_puppeteer_download_host;
 Downloader.downloadRevision(platform, revision, DOWNLOAD_HOST, onProgress)
