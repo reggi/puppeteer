@@ -237,7 +237,7 @@ function requestOptions(url, method = 'GET') {
     /** @type {Object} */
     const parsedProxyURL = URL.parse(proxyURL);
     result.agent = new ProxyAgent({
-      host: parsedProxyURL.host,
+      hostname: parsedProxyURL.hostname,
       port: parsedProxyURL.port,
       secureProxy: parsedProxyURL.protocol === 'https:'
     });
