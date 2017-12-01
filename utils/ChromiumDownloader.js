@@ -232,11 +232,13 @@ function requestOptions(url, method = 'GET') {
   result.method = method;
 
   const proxyURL = getProxyForUrl(url);
+  console.log(proxyURL)
   if (proxyURL) {
     /** @type {Object} */
     const parsedProxyURL = URL.parse(proxyURL);
+    console.log(parsedProxyURL)
     parsedProxyURL.secureProxy = parsedProxyURL.protocol === 'https:';
-
+    console.log(parsedProxyURL.secureProxy)
     result.agent = new ProxyAgent(parsedProxyURL);
   }
 
