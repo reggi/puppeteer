@@ -38,12 +38,20 @@ const NPM_HTTPS_PROXY = process.env.npm_config_https_proxy || process.env.npm_co
 const NPM_HTTP_PROXY = process.env.npm_config_http_proxy || process.env.npm_config_proxy;
 const NPM_NO_PROXY = process.env.npm_config_no_proxy;
 
+console.log(process.env.HTTPS_PROXY)
+console.log(process.env.HTTP_PROXY)
+console.log(process.env.NO_PROXY)
+
 if (NPM_HTTPS_PROXY)
   process.env.HTTPS_PROXY = NPM_HTTPS_PROXY;
 if (NPM_HTTP_PROXY)
   process.env.HTTP_PROXY = NPM_HTTP_PROXY;
 if (NPM_NO_PROXY)
   process.env.NO_PROXY = NPM_NO_PROXY;
+
+console.log(process.env.HTTPS_PROXY)
+console.log(process.env.HTTP_PROXY)
+console.log(process.env.NO_PROXY)
 
 const allRevisions = Downloader.downloadedRevisions();
 const DOWNLOAD_HOST = process.env.PUPPETEER_DOWNLOAD_HOST || process.env.npm_config_puppeteer_download_host;
