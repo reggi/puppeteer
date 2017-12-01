@@ -239,7 +239,7 @@ function requestOptions(url, method = 'GET') {
     result.agent = new ProxyAgent({
       host: parsedProxyURL.host,
       port: parsedProxyURL.port,
-      secureProxy = parsedProxyURL.protocol === 'https:'
+      secureProxy: parsedProxyURL.protocol === 'https:'
     });
   }
 
